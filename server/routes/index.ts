@@ -1,5 +1,6 @@
 export default eventHandler((event) => {
-  console.log("Before", JSON.stringify(process.env));
+  const config = useRuntimeConfig(event);
+  console.log("Before", JSON.stringify(process.env), JSON.stringify(config));
 
   return "Start by editing <code>server/routes/index.ts</code>.";
 });
