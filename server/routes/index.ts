@@ -1,8 +1,8 @@
-export default eventHandler((event) => {
+export default eventHandler(async (event) => {
+  await import('dotenv/config');
   const config = useRuntimeConfig(event);
+
   console.log("Before", JSON.stringify(process.env),
-    // @ts-expect-error
-    env,
     JSON.stringify(config)
   );
 
