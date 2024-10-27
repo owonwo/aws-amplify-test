@@ -1,5 +1,3 @@
-console.log('REACT_APP_TEST_VARIABLE', process.env.REACT_APP_TEST_VARIABLE);
-
 export default eventHandler(async (event) => {
   await import('dotenv/config');
   const config = useRuntimeConfig(event);
